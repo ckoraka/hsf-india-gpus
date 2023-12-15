@@ -4,6 +4,10 @@
 
 ### **Set-up instructions**
 
+Start by launching the following notebook
+```
+https://binderhub.ssl-hep.org/v2/gh/research-software-collaborations/courses-hsf-india-december2023/gpugpu_true
+```
 
 ### **Getting familiar with the GPU** 
 Lets check how many / what type of GPUs are available in the system. To do this, simply run :
@@ -19,7 +23,7 @@ nvidia-smi
 During the lecture we saw a "Hello World" CUDA kernel. Lets try and run it ourselves! To compile and run the *cuda_hello.cu* CUDA script simply do :
 
 ```
-nvcc cuda_hello.cu -o cuda_hello
+nvcc cuda_hello.cu -o cuda_hello -gencode=arch=compute_61,code=sm_61
 ./cuda_hello
 ```
 **Lets try and answer some questions :**
@@ -39,7 +43,7 @@ Goal of this excersise is to write a CUDA kernel that performs a 2-dimensional s
 
 To compile and run the CUDA script you can do :
 ```
-nvcc matrix_multiplication.cu -o matrix_multiplication
+nvcc matrix_multiplication.cu -o matrix_multiplication -gencode=arch=compute_61,code=sm_61
 ./matrix_multiplication
 ```
 **Lets try and answer some questions :**
