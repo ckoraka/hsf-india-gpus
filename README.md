@@ -38,6 +38,12 @@ Goal of this excersise is to write a CUDA kernel that calculates the dot product
 - Start by tacking a look at the file **dot_product.cu**.
 - Find and properly update all parts of the script denoted with **FIXME**.
 
+To compile and run the CUDA script you can do :
+```
+nvcc dot_product.cu -o dot_product -gencode=arch=compute_61,code=sm_61
+./dot_product
+```
+
 **Lets try and answer some questions :**
 - When you dont make use of the CUDA specific atomicAdd() function, what do you observe? Is the result correct? Do you get consistent results if you run the kernel multiple times?
 - Why is this happening?
