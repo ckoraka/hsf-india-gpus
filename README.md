@@ -33,7 +33,18 @@ nvcc cuda_hello.cu -o cuda_hello -gencode=arch=compute_61,code=sm_61
 
 If you get stuck you can take a look at the *cuda_hello.cu* script in the *solutions* directory.
 
-## **Exercise 2 :** Matrix multiplication on the GPU
+## **Exercise 2:** "Calculating a dot product" with CUDA
+Goal of this excersise is to write a CUDA kernel that calculates the dot product of two vectors on the GPU.
+- Start by tacking a look at the file **dot_product.cu**.
+- Find and properly update all parts of the script denoted with **FIXME**.
+
+**Lets try and answer some questions :**
+- When you dont make use of the CUDA specific atomicAdd() function, what do you observe? Is the result correct? Do you get consistent results if you run the kernel multiple times?
+- Why is this happening?
+
+If you get stuck you can take a look at the *dot_product.cu* script in the *solutions* directory.
+
+## **Exercise 3 :** Matrix multiplication on the GPU
 Goal of this excersise is to write a CUDA kernel that performs a 2-dimensional square matrix multiplication on the GPU. 
 - Start by taking a look at the file **matrix_multiplication.cu**.  
 - We can respresent the 2-D matrix in 1-D as shown in the image below. This will make copying the matrix from the host to device and from device to host easier. The size of each matrix is DSIZE*DSIZE.
