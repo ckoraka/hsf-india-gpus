@@ -23,7 +23,7 @@ nvidia-smi
 During the lecture we saw a "Hello World" CUDA kernel. Lets try and run it ourselves! To compile and run the *cuda_hello.cu* CUDA script simply do :
 
 ```
-nvcc cuda_hello.cu -o cuda_hello -gencode=arch=compute_61,code=sm_61
+nvcc cuda_hello.cu -o cuda_hello -gencode=arch=compute_61,code=sm_61 -gencode=arch=compute_80,code=sm_80
 ./cuda_hello
 ```
 **Lets try and answer some questions :**
@@ -40,7 +40,7 @@ Goal of this excersise is to write a CUDA kernel that calculates the dot product
 
 To compile and run the CUDA script you can do :
 ```
-nvcc dot_product.cu -o dot_product -gencode=arch=compute_61,code=sm_61
+nvcc dot_product.cu -o dot_product -gencode=arch=compute_61,code=sm_61 -gencode=arch=compute_80,code=sm_80
 ./dot_product
 ```
 
@@ -60,7 +60,7 @@ Goal of this excersise is to write a CUDA kernel that performs a 2-dimensional s
 
 To compile and run the CUDA script you can do :
 ```
-nvcc matrix_multiplication.cu -o matrix_multiplication -gencode=arch=compute_61,code=sm_61
+nvcc matrix_multiplication.cu -o matrix_multiplication -gencode=arch=compute_61,code=sm_61 -gencode=arch=compute_80,code=sm_80
 ./matrix_multiplication
 ```
 **Lets try and answer some questions :**
